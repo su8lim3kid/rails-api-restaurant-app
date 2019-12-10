@@ -6,6 +6,7 @@ import { Container, } from "semantic-ui-react";
 
 class App extends React.Component {
   state = { lists: [], };
+  
 
   componentDidMount() {
     axios.get("/api/menus")
@@ -48,7 +49,9 @@ class App extends React.Component {
     return (
       <Container style={{ padding: "30px 0" }}>
         <h1>Menu's</h1>
-        <ListForm addList={this.addList} />
+        <ListForm addList={this.addList}
+        // toggleEdit={this.toggleEdit} 
+        />
         <br />
         <br />
         <List 

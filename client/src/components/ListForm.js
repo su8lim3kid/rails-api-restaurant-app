@@ -11,9 +11,16 @@ class ListForm extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+    if (this.props.id) {
+        this.props.edit({id: this.props.id, ...this.state});
+        // this.props.toggleEdit()
+    }else{
     this.props.addList(this.state.name);
+    }
     this.setState({ name: "", });
   };
+
+  
 
   render() {
     return (

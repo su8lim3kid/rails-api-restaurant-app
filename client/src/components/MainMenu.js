@@ -4,10 +4,13 @@ import { Checkbox, Header, Button, Icon, } from "semantic-ui-react";
 const List = (props) => (
   <div style={styles.flex}>
     <div style={styles.flex}>
+
+   
       <Checkbox 
         defaultChecked={props.complete} 
         onClick={() => props.updateList(props.id)}
       />
+      
       <div style={props.complete ? styles.complete : {}}>
         <Header as="h2" style={{ marginLeft: "15px", }}>{ props.name }</Header>
       </div>
@@ -17,10 +20,16 @@ const List = (props) => (
       color="red"
       size="tiny"
       style={{ marginLeft: "15px", }}
-      onClick={() => props.deleteList(props.id)}
-    >
-      <Icon name="trash" />
+      onClick={() => props.deleteList(props.id)}>
+   <Icon name="trash" />
     </Button>
+     {/* working on edit
+    <Button 
+      icon 
+      color="blue" >
+        onClick={this.toggleEdit}>
+       <Icon name="pencil" />
+    </Button> */}
   </div>
 );
 

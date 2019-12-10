@@ -9,6 +9,7 @@ const List = (props) => (
         {...list} 
         deleteList={props.deleteList} 
         updateList={props.updateList}
+        // edit={this.editList}
       />
     ))}
   </div>
